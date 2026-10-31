@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fdfcf9"/>
+    <meta name="description" content="Considered creative design solutions for thoughtful brands and projects"/>
+    <meta name="author" content="Szilvi Cseke"/>
+    
+    <title>SC - Studio Creative</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'> 
+    <link href='https://fonts.googleapis.com/css?family=Karma' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Syne' rel='stylesheet'>
+    
+    <link href='https://fonts.googleapis.com/css?family=Meow Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="styles.css" />
+    
+</head>
+
+<body>
+    <header class="site-header">
+    
+        <div class="logo"><a href="index.html">STUDIO CREATIVE</a></div>
+        
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span2></span2><span></span>
+        </button>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a2>CONTACT</a2></li>
+        </ul>
+        
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1><i>Contact Studio Creative</i></h1>
+            <p>
+                Please feel free to contact Studio Creative in case you have a project to work on, if you would like to collaborate or if you just have any comments in general.
+                <br><br><br><br>
+                Studio Creative is based in Europe and available for work worldwide.
+                <br><br><br><br>
+                <i>All is welcome, positivity & kindness are appreciated!</i>
+            </p>
+            <h2>Szilvi</h2>
+        </section>
+        <section>
+            <button class="link-body-h"><a href="mailto:studiocreative.scs@gmail.com">SEND AN EMAIL</a></button>
+            <br>
+            <button class="link-body-h"><a href="https://www.linkedin.com/in/szilvi-cseke/" target="_blank" rel="noreferrer">CONNECT ON LINKEDIN</a></button>
+            <br>
+            <button class="link-body-h"><a href="https://www.instagram.com/__screative__/" target="_blank" rel="noreferrer">FIND ME ON INSTAGRAM</a></button>
+        </section>
+        <h3><i>Additional Links</i></h3>
+        <section>
+            <button class="link-body-h"><a href="https://szilvicsekeuxui.myportfolio.com/work" target="_blank" rel="noreferrer">UX/UI PORTFOLIO</a></button>
+            <br>
+            <button class="link-body-h"><a href="https://szilvicsekedesign.myportfolio.com/projects" target="_blank" rel="noreferrer">GRAPHIC DESIGN PORTFOLIO</a></button>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-body">
+            <div class="footer-copy">
+            <p>
+                STUDIO CREATIVE is located in Europe and has completed projects worldwide.<br>SC is always available for inspiring collaborations.
+            </p>
+            <div class="footer-brand"> 
+                <p>STUDIO CREATIVE</p>
+            </div>
+        </div>
+            <div class="footer-links">
+            <div class="footer-links-coloumn">
+                <a href="index.html">HOME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="profile.html">PROFILE</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="footer-links-coloumn">
+                <br>
+                <a href="mailto:studiocreative.scs@gmail.com">EMAIL</a>
+                <a href="https://www.linkedin.com/in/szilvi-cseke/" target="_blank" rel="noreferrer">LINKEDIN</a>
+                <a href="https://www.instagram.com/__screative__/" target="_blank" rel="noreferrer">INSTAGRAM</a>
+            </div>
+        </div>
+        </div>
+        <p>&copy; 2026 STUDIO CREATIVE</p>
+    </footer>
+    
+    <script>
+        
+        const toggle = document.querySelector('.menu-toggle');
+        const links = document.querySelector('.nav-links');
+
+        function setMenu(open) {
+            links.classList.toggle('open', open);
+            toggle.setAttribute('aria-expanded', open);
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+
+        toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+
+        // Close after tapping a link
+        links.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+
+        // Close with Escape
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+        // Reset if the window is resized to desktop width
+        window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+    </script>
+   
+</body>
+</html>
