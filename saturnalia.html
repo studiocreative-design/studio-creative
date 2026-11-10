@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fdfcf9"/>
+    <meta name="description" content="Considered creative design solutions for thoughtful brands and projects"/>
+    <meta name="author" content="Szilvi Cseke"/>
+    
+    <title>SC - Studio Creative</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'> 
+    <link href='https://fonts.googleapis.com/css?family=Karma' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Syne' rel='stylesheet'>
+    
+    <link href='https://fonts.googleapis.com/css?family=Meow Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+    
+    
+    
+    <link rel="stylesheet" href="styles.css" />
+    
+</head>
+
+<body>
+    <header class="site-header">
+        
+        <div class="logo"><a href="index.html">STUDIO CREATIVE</a></div>
+        
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span2></span2><span></span>
+        </button>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1><i>Graphic Design Projects</i></h1>
+            <h3><i>Saturnalia Festival</i></h3>
+            <p>
+                Saturnalia Festival takes its name and draws inspiration from an ancient Roman festival of the same name. The new version of the festival is a 3-day cultural festival from the third Saturday of December each year, which includes events of ritual, music, dance, performance art, creative & personal development workshops and elaborate feasting & drinking.
+                <br><br><br><br>
+                The festival is timed to fall on or very close to the southern hemisphere summer solstice on December 21st, often celebrated as Midsummer in many European traditions.
+                <br><br><br><br>
+                This version of Saturnalia is a small to medium-sized camping festival held just outside Melbourne at the Hanging Rock regional setting. The event expects ticket sales of 3,000 capacity and is targeted towards 25-50 year-olds. It is an 18+ event only and minors are not permitted.
+                <br><br><br><br><br><br>
+                <i>Feast in a another realm of being...</i>
+                <br><br>
+                <i>Saturnalia Festival draws participants into ancient solstice rituals, exploring the links between early & current myths, humans & nature, dark & light, birth & death, and different forms of human identity through a mix of creative and personal development workshops, performance art, music, feasts of food and drink, and transcendent states of being.</i>
+            </p>
+        </section>
+        <section class="album">
+            <div class="album-row-v">
+                <div class="album-frame">
+                    <img class="img-graphic" src="assets/Saturnalia_024%20copy.webp" alt="Saturnalia Festival" loading="lazy">
+                </div>
+                <div class="album-frame">
+                    <img class="img-graphic" src="assets/Saturnalia_042%20copy.webp" alt="Saturnalia Festival" loading="lazy">
+                </div>
+                <div class="album-frame">
+                    <img class="img-graphic" src="assets/Saturnalia_046%20copy.webp" alt="Saturnalia Festival" loading="lazy">
+                </div>       
+            </div>
+        </section>
+        <button class="link-body-v"><a href="https://szilvicsekedesign.myportfolio.com/saturnalia" target="_blank" rel="noreferrer">FOR THE FULL PROJECT PLEASE CLICK HERE</a></button>
+        <section class="intro">
+            <h3><i>Project Specifics</i></h3>
+            <p>
+                Project:
+                <br>
+                Posterseries
+                <br><br><br>
+                Tools:
+                <br>
+                Adobe Suite
+                <br><br><br>
+                Skills:
+                <br>
+                Graphic design
+            </p>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-body">
+            <div class="footer-copy">
+            <p>
+                STUDIO CREATIVE is located in Europe and has completed projects worldwide.<br>We are always available for inspiring collaborations.
+            </p>
+            <div class="footer-brand"> 
+                <p>STUDIO CREATIVE</p>
+            </div>
+        </div>
+            <div class="footer-links">
+            <div class="footer-links-coloumn">
+                <a href="index.html">HOME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="profile.html">PROFILE</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="footer-links-coloumn">
+                <br>
+                <a href="mailto:studiocreative.scs@gmail.com">EMAIL</a>
+                <a href="https://www.linkedin.com/in/szilvi-cseke/" target="_blank" rel="noreferrer">LINKEDIN</a>
+                <a href="https://www.instagram.com/__screative__/" target="_blank" rel="noreferrer">INSTAGRAM</a>
+            </div>
+        </div>
+        </div>
+        <p>&copy; 2026 STUDIO CREATIVE</p>
+    </footer>
+    
+    <script>
+        
+        const toggle = document.querySelector('.menu-toggle');
+        const links = document.querySelector('.nav-links');
+
+        function setMenu(open) {
+            links.classList.toggle('open', open);
+            toggle.setAttribute('aria-expanded', open);
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+
+        toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+
+        // Close after tapping a link
+        links.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+
+        // Close with Escape
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+        // Reset if the window is resized to desktop width
+        window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+    </script>
+
+</body>
+</html>

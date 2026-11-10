@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fdfcf9"/>
+    <meta name="description" content="Considered creative design solutions for thoughtful brands and projects"/>
+    <meta name="author" content="Szilvi Cseke"/>
+    
+    <title>SC - Studio Creative</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'> 
+    <link href='https://fonts.googleapis.com/css?family=Karma' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Syne' rel='stylesheet'>
+    
+    <link href='https://fonts.googleapis.com/css?family=Meow Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+    
+    
+    
+    <link rel="stylesheet" href="styles.css" />
+    
+</head>
+
+<body>
+    <header class="site-header">
+        
+        <div class="logo"><a href="index.html">STUDIO CREATIVE</a></div>
+        
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span2></span2><span></span>
+        </button>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1><i>UX/UI Projects</i></h1>
+            <h3><i>Starbucks Kiosk</i></h3>
+            <p>
+                The Starbucks self-service kiosk designed for in-store use caters to both members and new customers while creating a fast-paced order service without the need for assistance or waiting in line.
+                <br><br><br><br>
+                <i>The final focus of the project was on the member target group and their need for a swift and personalised ordering process.</i>
+                <br><br><br><br>
+                The kiosk allows a smooth & secure sign-in process via the Starbucks mobile app that members would already have as it is needed for Starbucks' reward system. Once signed-in, members can have a faster and more tailored experience.
+            </p>
+        </section>
+        <section class="album-gap50">
+            <div class="album-coloumn-h">
+                <div class="album-frame">
+                    <img class="img-starbucks" src="assets/Touchscreen.DRINKS%20MENU_1280%20copy.webp" alt="Starbucks Kiosk" loading="lazy">
+                 </div>
+                <div class="album-frame">
+                    <img class="img-starbucks" src="assets/Touchscreen.ORDER_1280%20copy.webp" alt="Starbucks Kiosk" loading="lazy">
+                </div>
+                <div class="album-frame">
+                    <img class="img-starbucks" src="assets/Touchscreen.PAYMENT_1280%20copy.webp" alt="Starbucks Kiosk" loading="lazy">
+                </div>
+                <div class="album-frame">
+                    <img class="img-starbucks" src="assets/Touchscreen.PAYMENT.05_1280%20copy.webp" alt="Starbucks Kiosk" loading="lazy">
+                </div>
+            </div>
+        </section>
+        <button class="link-body-v"><a href="https://szilvicsekeuxui.myportfolio.com/starbucks-kiosk" target="_blank" rel="noreferrer">FOR MORE INFORMATION ON THIS PROJECT PLEASE CLICK HERE</a></button>
+        <section class="intro">
+            <h3><i>Project Specifics</i></h3>
+            <p>
+                Project:
+                <br><br>
+                Starbucks self-service kiosk (in-store)
+                <br><br><br>
+                Activities:
+                <br><br>
+                Field research and case studies
+                <br>
+                (Costa Coffee, Starbucks)
+                <br>
+                Adopting existing Starbucks Style Guide
+                <br>
+                Product Design Specification documentation
+                <br>
+                Prototype testing
+                <br>
+                (card sorting)
+                <br><br><br>
+                Tools:
+                <br><br>
+                Figma, Unity, Adobe Suite
+                <br><br><br>
+                Skills:
+                <br><br>
+                UX/UI
+                <br>
+                3D design
+                <br>
+                Graphic design
+            </p>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-body">
+            <div class="footer-copy">
+            <p>
+                STUDIO CREATIVE is located in Europe and has completed projects worldwide.<br>We are always available for inspiring collaborations.
+            </p>
+            <div class="footer-brand"> 
+                <p>STUDIO CREATIVE</p>
+            </div>
+        </div>
+            <div class="footer-links">
+            <div class="footer-links-coloumn">
+                <a href="index.html">HOME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="profile.html">PROFILE</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="footer-links-coloumn">
+                <br>
+                <a href="mailto:studiocreative.scs@gmail.com">EMAIL</a>
+                <a href="https://www.linkedin.com/in/szilvi-cseke/" target="_blank" rel="noreferrer">LINKEDIN</a>
+                <a href="https://www.instagram.com/__screative__/" target="_blank" rel="noreferrer">INSTAGRAM</a>
+            </div>
+        </div>
+        </div>
+        <p>&copy; 2026 STUDIO CREATIVE</p>
+    </footer>
+    
+    <script>
+        
+        const toggle = document.querySelector('.menu-toggle');
+        const links = document.querySelector('.nav-links');
+
+        function setMenu(open) {
+            links.classList.toggle('open', open);
+            toggle.setAttribute('aria-expanded', open);
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+
+        toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+
+        // Close after tapping a link
+        links.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+
+        // Close with Escape
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+        // Reset if the window is resized to desktop width
+        window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+    </script>
+
+
+</body>
+</html>
